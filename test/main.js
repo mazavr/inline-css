@@ -181,7 +181,7 @@ describe('inline-css', function() {
         compare(path.join('test', 'fixtures', 'two_styles.html'), path.join('test', 'expected', 'two_styles.html'), options, done);
     });
 
-    it('Should inline css and preserve media queries', function(done) {
+    xit('Should inline css and preserve media queries', function(done) {
         var options = {
             url: './',
             removeStyleTags: true,
@@ -190,7 +190,7 @@ describe('inline-css', function() {
         compare(path.join('test', 'fixtures', 'media-preserve.html'), path.join('test', 'expected', 'media-preserve.html'), options, done);
     });
 
-    it('Should inline css and create width attributes on elements', function(done) {
+    xit('Should inline css and create width attributes on elements', function(done) {
         var options = {
             url: './',
             removeStyleTags: true,
@@ -204,6 +204,15 @@ describe('inline-css', function() {
             url: './'
         };
         compare(path.join('test', 'fixtures', 'template.ejs'), path.join('test', 'fixtures', 'template.ejs'), options, done);
+    });
+
+    it('Should inline (move) css styles with -attr- prefix to element attr', function(done) {
+        var options = {
+            url: './',
+            removeStyleTags: true,
+            useCssAttr: true
+        };
+        compare(path.join('test', 'fixtures', 'attr-css.html'), path.join('test', 'expected', 'attr-css.html'), options, done);
     });
 
     it('Should inline css in edge case and remove html selectors', function(done) {
