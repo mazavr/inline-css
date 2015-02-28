@@ -46,7 +46,6 @@ module.exports = function (html, options, callback) {
             applyLinkTags: true,
             removeLinkTags: true,
             preserveMediaQueries: false,
-            applyWidthAttributes: false,
             removeHtmlSelectors: false,
             useCssAttr: false
         }, options);
